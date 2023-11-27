@@ -1,0 +1,28 @@
+There are two types of intents in android:
+
+Implicit and
+Explicit.
+
+
+Implicit
+********
+
+Implicit Intent doesn’t specify the component.
+In such a case, intent provides information on available components provided by the system that is to be invoked.
+For example, you may write the following code to view the webpage.
+
+
+Code
+****
+
+Intent intent=new Intent(Intent.ACTION_VIEW);
+intent.setData(Uri.parse(“https://certisured.com/”));
+startActivity(intent);
+
+
+Explicit
+********
+Explicit Intent specifies the component. In such a case, intent provides the external class to be invoked.
+
+Intent i = new Intent(getApplicationContext(), .class);
+startActivity(i);
